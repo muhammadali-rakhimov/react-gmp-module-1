@@ -1,11 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import App from './App'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+createRoot(document.getElementById("root")).render(
+  React.createElement(
+    "div",
+    null,
+    "Hello World!",
+    React.createElement(
+      "ul",
+      null,
+      React.createElement("li", null, "1st element of the list"),
+      React.createElement("li", null, "2st element of the list"),
+      React.createElement("li", null, "3st element of the list")
+    )
+  )
+);
