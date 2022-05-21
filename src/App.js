@@ -1,29 +1,15 @@
-import React from "react";
+import React, { PureComponent } from "react";
+import "./App.css";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
-
+class App extends PureComponent {
   render() {
     return (
       <div>
-        {this.state.count}
-        <div>
-          <button
-            onClick={() => this.setState({ count: this.state.count + 1 })}
-          >
-            Increment
-          </button>
-          <button
-            onClick={() => this.setState({ count: this.state.count - 1 })}
-          >
-            Decrement
-          </button>
-        </div>
+        <h2>Toggle Switch</h2>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
       </div>
     );
   }
